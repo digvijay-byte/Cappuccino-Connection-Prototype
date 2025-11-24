@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🧠 AI Deepfake Image Detector — React + TypeScript + Vite + Gemini API
 
-# Run and deploy your AI Studio app
+Detect whether an image is **REAL** or **AI-generated/manipulated** using **Google Gemini Vision API**, wrapped inside a fast and modern **React + TypeScript + Vite** frontend.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1vaDw94kMSA7seDCVZXf8dy22o2o_EnKX
+## 🚀 Tech Stack
 
-## Run Locally
+| Layer        | Technology                          |
+|-------------|--------------------------------------|
+| Framework   | React + TypeScript                   |
+| Build Tool  | Vite                                 |
+| AI Model    | Google Gemini Vision API             |
+| Services    | `/services/geminiService.ts`         |
+| Utilities   | `/utils/dataGenerator.ts`            |
+| Typing      | `/types.ts`                          |
+| Metadata    | `metadata.json`                      |
 
-**Prerequisites:**  Node.js
+---
 
+## 🔍 What This App Does
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. User uploads an image  
+2. The image is processed and sent to **Gemini Vision model**
+3. The model checks for:
+   - texture/skin irregularities
+   - lighting inconsistencies
+   - facial symmetry distortions
+   - metadata anomalies
+4. App displays:
