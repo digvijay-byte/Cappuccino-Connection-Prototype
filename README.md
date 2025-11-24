@@ -1,7 +1,7 @@
 <h1>☕ Cappuccino Connect — Inventory & Invoice Dashboard (Prototype)</h1>
 
 <p>
-  A simple, non-technical dashboard built for <b>The Cappuccino Connection</b> to
+  A simple, non-technical dashboard built for <b>The Cappuccino connect</b> to
   manage <b>inventory, invoices, and accounting sync</b> in one clean interface
   — reducing manual work and improving clarity.
 </p>
@@ -82,7 +82,7 @@ Its purpose is to show that the system:
 
 <h2>👤 Target Business</h2>
 <p>
-<b>The Cappuccino Connection — Atlanta</b><br />
+<b>The Cappuccino Connect — Atlanta</b><br />
 Specialty catering & rental services providing:
 </p>
 <ul>
@@ -109,7 +109,7 @@ Approx. <b>1,200 products</b> including consumables and rental equipment.
 
 <h2>⚠️ Note</h2>
 <p>
-The goal of this prototype is to give Mike a <b>10–15 minute walkthrough</b>
+The goal of this prototype is to give client a <b>10–15 minute walkthrough</b>
 to understand needs, finalize features, and estimate a budget that fits
 a <b>small–medium sized business</b>.
 </p>
@@ -123,5 +123,5 @@ on <b>actual workflow + accounting platform + must-have automation needs</b>.
 </p>
 
 <p align="center">
-Made with ❤️ for The Cappuccino Connection to remove confusion and manual work.
+Made with ❤️ for The Cappuccino connect to remove confusion and manual work.
 </p>
