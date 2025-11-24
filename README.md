@@ -18,25 +18,34 @@ Detect whether an image is **REAL** or **AI-generated/manipulated** using **Goog
 
 ---
 
-## 🔍 What This App Does
 
-1. User uploads an image  
-2. The image is processed and sent to **Gemini Vision model**
-3. The model checks for:
-   - texture/skin irregularities
-   - lighting inconsistencies
-   - facial symmetry distortions
-   - metadata anomalies
-4. App displays: Verdict: REAL / FAKE
+
+<h2>🔍 What This App Does</h2>
+
+<ol>
+  <li>User uploads an image</li>
+  <li>The image is processed and sent to the <b>Gemini Vision model</b></li>
+  <li>The model checks for:
+    <ul>
+      <li>texture / skin irregularities</li>
+      <li>lighting inconsistencies</li>
+      <li>facial symmetry distortions</li>
+      <li>metadata anomalies</li>
+    </ul>
+  </li>
+  <li>The app displays:
+    <pre><code>Verdict: REAL / FAKE
 Confidence Score
 Explanation Reasoning
+</code></pre>
+  </li>
+</ol>
 
----
+<hr />
 
-## 📂 Project Structure
+<h2>📂 Project Structure</h2>
 
-
-Deepfake-Image-Detection/
+<pre><code>Deepfake-Image-Detection/
 ├─ components/                 # UI components
 ├─ services/
 │   └─ geminiService.ts        # Gemini API caller
@@ -50,84 +59,102 @@ Deepfake-Image-Detection/
 ├─ package.json
 ├─ tsconfig.json
 └─ vite.config.ts
+</code></pre>
 
----
+<hr />
 
-## 🔧 Setup & Installation
+<h2>🔧 Setup & Installation</h2>
 
-### 1️⃣ Install dependencies
-```bash
-npm install
+<h3>1️⃣ Install dependencies</h3>
+<pre><code>npm install
+</code></pre>
 
-2️⃣ Add your Gemini API Key
-Create a .env file in the project root and add:
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+<h3>2️⃣ Add your Gemini API Key</h3>
+<p>Create a <code>.env</code> file in the project root and add:</p>
+<pre><code>VITE_GEMINI_API_KEY=your_gemini_api_key_here
+</code></pre>
+<p>You can generate an API key from <b>Google AI Studio</b>.</p>
 
-You can generate an API key from Google AI Studio.
-3️⃣ Run the app
-npm run dev
+<h3>3️⃣ Run the app</h3>
+<pre><code>npm run dev
+</code></pre>
+<p>Open the local URL shown in the terminal — usually:</p>
+<pre><code>http://localhost:5173
+</code></pre>
 
-Open the local URL shown in the terminal — usually:
-http://localhost:5173
+<h3>4️⃣ Build for production (optional)</h3>
+<pre><code>npm run build
+</code></pre>
 
-4️⃣ Build for production (optional)
-npm run build
+<hr />
 
+<h2>🖥️ Usage Flow</h2>
 
-🖥️ Usage Flow
-StepAction1Upload an image (JPG / PNG / JPEG / WEBP)2Click Analyze3Wait for Gemini model processing4See verdict + confidence + reasoning
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Upload an image (JPG / PNG / JPEG / WEBP)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Click <b>Analyze</b></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Wait for Gemini model processing</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>See verdict + confidence + reasoning</td>
+    </tr>
+  </tbody>
+</table>
 
-🧭 Roadmap (Planned Enhancements)
+<hr />
 
+<h2>🧭 Roadmap (Planned Enhancements)</h2>
+<ul>
+  <li>🔥 Heatmap / overlay highlighting suspicious image regions</li>
+  <li>📑 Drag-and-drop image support</li>
+  <li>💾 History of previous checks stored locally</li>
+  <li>📊 Confidence score visual gauge</li>
+  <li>🎥 Video deepfake detection support</li>
+  <li>📱 Mobile-friendly UI</li>
+</ul>
 
-🔥 Heatmap/overlay highlighting suspicious image regions
+<hr />
 
+<h2>⚠️ Disclaimer</h2>
+<p>
+  This tool is intended <b>only for research, learning, and awareness</b>.<br />
+  Do not use it for:
+</p>
+<ul>
+  <li>Harassment</li>
+  <li>Surveillance</li>
+  <li>Misuse of personal images</li>
+  <li>Spreading misinformation</li>
+  <li>Discrimination or privacy violation</li>
+</ul>
+<p>
+  Model predictions may be imperfect — always pair automated checks with human judgment.
+</p>
 
-📑 Drag-and-drop image support
+<hr />
 
-
-💾 History of previous checks stored locally
-
-
-📊 Confidence score visual gauge
-
-
-🎥 Video deepfake detection support
-
-
-📱 Mobile-friendly UI
-
-
-
-⚠️ Disclaimer
-This tool is intended only for research, learning, and awareness.
-Do not use it for:
-
-
-Harassment
-
-
-Surveillance
-
-
-Misuse of personal images
-
-
-Spreading misinformation
-
-
-Discrimination or privacy violation
-
-
-Model predictions may be imperfect — always pair automated checks with human judgment.
-
-⭐ Support
-If you find this project useful and want to support future development, please consider giving the repository a Star ⭐.
-Made with ❤️ using React, TypeScript, Vite & Google Gemini API.
-
----
-
-If you ever want:
-🚀 badges • 🎨 banner • 🌓 dark theme README • 📹 GIF demo preview • 🔌 deploy button  
-just tell me **“README upgrade”** and I’ll enhance it instantly.
+<h2>⭐ Support</h2>
+<p>
+  If you find this project useful and want to support future development, please consider giving the repository a
+  <b>Star ⭐</b>.
+</p>
+<p>
+  Made with ❤️ using <b>React, TypeScript, Vite &amp; Google Gemini API</b>.
+</p>
 
