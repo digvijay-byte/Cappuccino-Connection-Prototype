@@ -1,4 +1,4 @@
-<h1>☕ Cappuccino Connection — Inventory & Invoice Dashboard (Prototype)</h1>
+<h1>☕ Cappuccino Connect — Inventory & Invoice Dashboard (Prototype)</h1>
 
 <p>
   A simple, non-technical dashboard built for <b>The Cappuccino Connection</b> to
