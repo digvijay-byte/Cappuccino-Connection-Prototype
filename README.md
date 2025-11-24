@@ -1,160 +1,127 @@
-# 🧠 AI Deepfake Image Detector — React + TypeScript + Vite + Gemini API
+<h1>☕ Cappuccino Connection — Inventory & Invoice Dashboard (Prototype)</h1>
 
-Detect whether an image is **REAL** or **AI-generated/manipulated** using **Google Gemini Vision API**, wrapped inside a fast and modern **React + TypeScript + Vite** frontend.
-
----
-
-## 🚀 Tech Stack
-
-| Layer        | Technology                          |
-|-------------|--------------------------------------|
-| Framework   | React + TypeScript                   |
-| Build Tool  | Vite                                 |
-| AI Model    | Google Gemini Vision API             |
-| Services    | `/services/geminiService.ts`         |
-| Utilities   | `/utils/dataGenerator.ts`            |
-| Typing      | `/types.ts`                          |
-| Metadata    | `metadata.json`                      |
-
----
-
-
-
-<h2>🔍 What This App Does</h2>
-
-<ol>
-  <li>User uploads an image</li>
-  <li>The image is processed and sent to the <b>Gemini Vision model</b></li>
-  <li>The model checks for:
-    <ul>
-      <li>texture / skin irregularities</li>
-      <li>lighting inconsistencies</li>
-      <li>facial symmetry distortions</li>
-      <li>metadata anomalies</li>
-    </ul>
-  </li>
-  <li>The app displays:
-    <pre><code>Verdict: REAL / FAKE
-Confidence Score
-Explanation Reasoning
-</code></pre>
-  </li>
-</ol>
+<p>
+  A simple, non-technical dashboard built for <b>The Cappuccino Connection</b> to
+  manage <b>inventory, invoices, and accounting sync</b> in one clean interface
+  — reducing manual work and improving clarity.
+</p>
 
 <hr />
 
-<h2>📂 Project Structure</h2>
-
-<pre><code>Deepfake-Image-Detection/
-├─ components/                 # UI components
-├─ services/
-│   └─ geminiService.ts        # Gemini API caller
-├─ utils/
-│   └─ dataGenerator.ts        # helper utilities
-├─ types.ts                    # shared interfaces
-├─ App.tsx                     # main UI screen
-├─ index.tsx                   # app entry point
-├─ index.html                  # HTML template
-├─ metadata.json               # model metadata
-├─ package.json
-├─ tsconfig.json
-└─ vite.config.ts
-</code></pre>
-
-<hr />
-
-<h2>🔧 Setup & Installation</h2>
-
-<h3>1️⃣ Install dependencies</h3>
-<pre><code>npm install
-</code></pre>
-
-<h3>2️⃣ Add your Gemini API Key</h3>
-<p>Create a <code>.env</code> file in the project root and add:</p>
-<pre><code>VITE_GEMINI_API_KEY=your_gemini_api_key_here
-</code></pre>
-<p>You can generate an API key from <b>Google AI Studio</b>.</p>
-
-<h3>3️⃣ Run the app</h3>
-<pre><code>npm run dev
-</code></pre>
-<p>Open the local URL shown in the terminal — usually:</p>
-<pre><code>http://localhost:5173
-</code></pre>
-
-<h3>4️⃣ Build for production (optional)</h3>
-<pre><code>npm run build
-</code></pre>
-
-<hr />
-
-<h2>🖥️ Usage Flow</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Step</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Upload an image (JPG / PNG / JPEG / WEBP)</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Click <b>Analyze</b></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Wait for Gemini model processing</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>See verdict + confidence + reasoning</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2>🧭 Roadmap (Planned Enhancements)</h2>
+<h2>🔍 What This Prototype Solves</h2>
+<p>
+The current accounting system is confusing and requires too much manual work.
+This prototype focuses on:
+</p>
 <ul>
-  <li>🔥 Heatmap / overlay highlighting suspicious image regions</li>
-  <li>📑 Drag-and-drop image support</li>
-  <li>💾 History of previous checks stored locally</li>
-  <li>📊 Confidence score visual gauge</li>
-  <li>🎥 Video deepfake detection support</li>
-  <li>📱 Mobile-friendly UI</li>
+  <li>Seeing stock levels clearly</li>
+  <li>Automatically identifying low-stock items</li>
+  <li>Tracking invoices (Paid / Pending / Overdue)</li>
+  <li>Reducing manual data entry via <b>accounting sync</b></li>
 </ul>
 
 <hr />
 
-<h2>⚠️ Disclaimer</h2>
+<h2>✨ Core Features</h2>
+
+<h3>📦 Inventory Management</h3>
+<ul>
+  <li>Product name, SKU, category, stock count, reorder level</li>
+  <li>Low-stock and out-of-stock alerts</li>
+  <li>Filters (Coffee / Chocolate / Smoothie / Equipment)</li>
+</ul>
+
+<h3>💳 Invoice Tracking</h3>
+<ul>
+  <li>Invoice ID, Customer, Amount, Status, Due Date</li>
+  <li>Filters: Paid / Pending / Overdue</li>
+  <li>Quick totals (Pending amount, Overdue amount)</li>
+</ul>
+
+<h3>🔄 Accounting Data Import (Demo Flow)</h3>
 <p>
-  This tool is intended <b>only for research, learning, and awareness</b>.<br />
-  Do not use it for:
+A visual, step-by-step data sync that solves the #1 pain point:
+<b>"I don’t know how to get my inventory records into the software."</b>
 </p>
 <ul>
-  <li>Harassment</li>
-  <li>Surveillance</li>
-  <li>Misuse of personal images</li>
-  <li>Spreading misinformation</li>
-  <li>Discrimination or privacy violation</li>
+  <li>Button: <code>Sync from Accounting / Import Data</code></li>
+  <li>Field-mapping preview:
+    <pre><code>CSV / Accounting → Dashboard
+Item Name → Product Name
+SKU → SKU
+On Hand → Stock
+Cost → Unit Cost
+</code></pre>
+  </li>
+  <li>No need to re-enter everything manually</li>
+</ul>
+
+<h3>🤖 Optional AI-Style Insights</h3>
+<p>A small insights panel displays useful suggestions such as:</p>
+<ul>
+  <li>You have <b>8 items below minimum stock</b>.</li>
+  <li><b>3 invoices</b> are overdue — total <b>$892</b>.</li>
+  <li>You may run short on <b>coffee beans</b> for next week's events.</li>
+</ul>
+
+<hr />
+
+<h2>📂 Demo Scope (Important)</h2>
+<p>
+This is a <b>prototype</b> — not a complete SaaS product.
+Its purpose is to show that the system:
+</p>
+<ul>
+  <li>Understand <b>his workflow</b></li>
+  <li>Eliminates <b>manual stock & invoice tracking</b></li>
+  <li>Integrates with <b>existing accounting data</b></li>
+  <li>Looks <b>simple and comfortable to use</b></li>
+</ul>
+
+<hr />
+
+<h2>👤 Target Business</h2>
+<p>
+<b>The Cappuccino Connection — Atlanta</b><br />
+Specialty catering & rental services providing:
+</p>
+<ul>
+  <li>Gourmet coffee stations</li>
+  <li>Chocolate fountain rentals</li>
+  <li>Smoothie stations</li>
 </ul>
 <p>
-  Model predictions may be imperfect — always pair automated checks with human judgment.
+Approx. <b>1,200 products</b> including consumables and rental equipment.
 </p>
 
 <hr />
 
-<h2>⭐ Support</h2>
+<h2>🧭 Future Enhancements (If Project Moves Forward)</h2>
+<ul>
+  <li>Event-based stock prediction (inventory vs upcoming bookings)</li>
+  <li>Maintenance tracker for rental equipment</li>
+  <li>Employee logins / role permissions</li>
+  <li>Automated invoice reminders</li>
+  <li>Integration with QuickBooks / Zoho Books / Xero</li>
+</ul>
+
+<hr />
+
+<h2>⚠️ Note</h2>
 <p>
-  If you find this project useful and want to support future development, please consider giving the repository a
-  <b>Star ⭐</b>.
-</p>
-<p>
-  Made with ❤️ using <b>React, TypeScript, Vite &amp; Google Gemini API</b>.
+The goal of this prototype is to give Mike a <b>10–15 minute walkthrough</b>
+to understand needs, finalize features, and estimate a budget that fits
+a <b>small–medium sized business</b>.
 </p>
 
+<hr />
+
+<h2>⭐ Feedback</h2>
+<p>
+Once the demo is reviewed, features and pricing will be finalized based
+on <b>actual workflow + accounting platform + must-have automation needs</b>.
+</p>
+
+<p align="center">
+Made with ❤️ for The Cappuccino Connection to remove confusion and manual work.
+</p>
